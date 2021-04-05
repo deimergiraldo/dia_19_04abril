@@ -45,12 +45,12 @@ print("{:%A, %d de %b de %Y}".format(fecha))
 
 #Ahora vamos a introducir esas fechas a cada casilla con un formato en específico
 
-vamos['E1'] = "Día de reporte 2"
-vamos['E2']="{:%A, %d de %b de %Y}".format(fecha)
-vamos['E3']="{:%A, %d de %b de %Y}".format(fecha)
-vamos['E4']="{:%A, %d de %b de %Y}".format(fecha)
-vamos['E5']="{:%A, %d de %b de %Y}".format(fecha)
-vamos['E6']="{:%A, %d de %b de %Y}".format(fecha)
+vamos['D1'] = "Día de reporte 2"
+vamos['D2']="{:%A, %d de %b de %Y}".format(fecha)
+vamos['D3']="{:%A, %d de %b de %Y}".format(fecha)
+vamos['D4']="{:%A, %d de %b de %Y}".format(fecha)
+vamos['D5']="{:%A, %d de %b de %Y}".format(fecha)
+vamos['D6']="{:%A, %d de %b de %Y}".format(fecha)
 
 
 clase.save("Respuestas2.xlsx")
