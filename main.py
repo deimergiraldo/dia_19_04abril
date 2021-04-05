@@ -22,7 +22,7 @@ for fila in celdas:
 celdas=celda  
 
 
-clase.save("Nuevodocumento.xlsx")
+clase.save("Respuestas1.xlsx")
 
 
 
@@ -40,3 +40,26 @@ print("Año:",ahora.year)  # Muestra año
 #ejemplo 2
 #En este segundo ejemplo voy a crear una nueva colomuna en la cuál voy a introducir fechas en diferentes formatos
 
+import openpyxl
+import datetime
+from datetime import date
+
+clase= openpyxl.load_workbook('Deimer.xlsx')
+
+vamos = clase.active
+
+#Vamos a seleccionar la columna de fechas que es la vamos a utilizar
+vamos['D1'] = "Día de entrega de calificaciones"
+fecha= datetime.date(2021,3, 6,)
+celdas=vamos['D2':'D6']
+
+dia=fecha.day
+mes=fecha.month
+año=fecha.year
+
+print("{:%A, %d de %b de %Y}".format(fecha))
+
+celdas="{:%A, %d de %b de %Y}".format(fecha)
+formato1 = "%a %b %d %H:%M:%S %Y"
+
+clase.save("Respuestas2.xlsx")
