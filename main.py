@@ -13,13 +13,24 @@ vamos['C1'] = "Día de reporte 1"
 #Vamos a seleccionar la columna de fechas que es la vamos a utilizar
 celdas=vamos['C2':'C6']
 
-formato1 = "%a %b %d %H:%M:%S %Y"
+formato1 = "%a %b %d %H:%M:%S de %Y"
 
-for fila in celdas:
-  for celda in fila:
-    print(celda.value)
+#for fechas in celdas:
+  #fechas=datetime.date(fechas)
 
-celdas=celda  
+for fecha in celdas:
+  for celda in fecha:
+    indicio=celda.value
+
+fechas=indicio
+
+vamos['C2']="{:%a %b %d %H:%M:%S de %Y}".format(fechas)
+vamos['C3']="{:%a %b %d %H:%M:%S de %Y}".format(fechas)
+vamos['C4']="{:%a %b %d %H:%M:%S de %Y}".format(fechas)
+vamos['C5']="{:%a %b %d %H:%M:%S de %Y}".format(fechas)
+vamos['C6']="{:%a %b %d %H:%M:%S de %Y}".format(fechas)
+
+
 
 
 clase.save("Respuestas1.xlsx")
