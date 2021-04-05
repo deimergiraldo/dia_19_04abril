@@ -13,32 +13,18 @@ vamos['C1'] = "Día de reporte 1"
 #Vamos a seleccionar la columna de fechas que es la vamos a utilizar
 celdas=vamos['C2':'C6']
 
-formato1 = "%a %b %d %H:%M:%S de %Y"
-
-#for fechas in celdas:
-  #fechas=datetime.date(fechas)
-
-listafecha=[]
-
-for fecha in celdas:
-  formato=[celda.value for celda in fecha]
-  listafecha.append(formato)
-
-print(formato)    
-#print(listafecha)
-#C2=date(listafecha[0])
-#C3=date(listafecha[1])
-#C4=date(listafecha[2])
-#C5=date(listafecha[3])
-#C6=date(listafecha[4])
-c2= formato[0]
+fecha= datetime.date(2021,3, 10)
+fecha2= datetime.date(2021,3, 11)
+fecha3= datetime.date(2021,3, 12)
+fecha4= datetime.date(2021,3, 13)
+fecha5= datetime.date(2021,3, 14)
 
 
-vamos['C2']="{:%a %b %d %H:%M:%S de %Y}".format(c2)
-#vamos['C3']="{:%a %b %d %H:%M:%S de %Y}".format(c3)
-#vamos['C4']="{:%a %b %d %H:%M:%S de %Y}".format(vamos['C4'])
-#vamos['C5']="{:%a %b %d %H:%M:%S de %Y}".format(vamos['C5'])
-#vamos['C6']="{:%a %b %d %H:%M:%S de %Y}".format(vamos['C6'])
+vamos['C2']="{:%a %b %d %H:%M:%S de %Y}".format(fecha)
+vamos['C3']="{:%a %b %d %H:%M:%S de %Y}".format(fecha2)
+vamos['C4']="{:%a %b %d %H:%M:%S de %Y}".format(fecha3)
+vamos['C5']="{:%a %b %d %H:%M:%S de %Y}".format(fecha4)
+vamos['C6']="{:%a %b %d %H:%M:%S de %Y}".format(fecha5)
 
 
 
