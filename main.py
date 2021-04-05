@@ -8,7 +8,7 @@ clase= openpyxl.load_workbook('Deimer.xlsx')
 vamos = clase.active
 
 #Vamos a cambiar el nombre de una celda
-vamos['C1'] = "Día de entrega de calificaciones"
+vamos['C1'] = "Día de reporte 1"
 
 #Vamos a seleccionar la columna de fechas que es la vamos a utilizar
 celdas=vamos['C2':'C6']
@@ -49,7 +49,7 @@ clase= openpyxl.load_workbook('Deimer.xlsx')
 vamos = clase.active
 
 #Vamos a seleccionar la columna de fechas que es la vamos a utilizar
-vamos['D1'] = "Día de entrega de calificaciones"
+
 fecha= datetime.date(2021,3, 6,)
 celdas=vamos['D2':'D6']
 
@@ -59,7 +59,14 @@ año=fecha.year
 
 print("{:%A, %d de %b de %Y}".format(fecha))
 
-celdas="{:%A, %d de %b de %Y}".format(fecha)
+vamos['D1'] = "Día de reporte 2"
+vamos['D2']="{:%A, %d de %b de %Y}".format(fecha)
+vamos['D3']="{:%A, %d de %b de %Y}".format(fecha)
+vamos['D4']="{:%A, %d de %b de %Y}".format(fecha)
+vamos['D5']="{:%A, %d de %b de %Y}".format(fecha)
+vamos['D6']="{:%A, %d de %b de %Y}".format(fecha)
+
+
 formato1 = "%a %b %d %H:%M:%S %Y"
 
 clase.save("Respuestas2.xlsx")
