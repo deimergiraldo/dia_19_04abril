@@ -18,17 +18,27 @@ formato1 = "%a %b %d %H:%M:%S de %Y"
 #for fechas in celdas:
   #fechas=datetime.date(fechas)
 
+listafecha=[]
+
 for fecha in celdas:
-  for celda in fecha:
-    indicio=celda.value
+  formato=[celda.value for celda in fecha]
+  listafecha.append(formato)
 
-fechas=indicio
+print(formato)    
+#print(listafecha)
+#C2=date(listafecha[0])
+#C3=date(listafecha[1])
+#C4=date(listafecha[2])
+#C5=date(listafecha[3])
+#C6=date(listafecha[4])
+c2= formato[0]
 
-vamos['C2']="{:%a %b %d %H:%M:%S de %Y}".format(fechas)
-vamos['C3']="{:%a %b %d %H:%M:%S de %Y}".format(fechas)
-vamos['C4']="{:%a %b %d %H:%M:%S de %Y}".format(fechas)
-vamos['C5']="{:%a %b %d %H:%M:%S de %Y}".format(fechas)
-vamos['C6']="{:%a %b %d %H:%M:%S de %Y}".format(fechas)
+
+vamos['C2']="{:%a %b %d %H:%M:%S de %Y}".format(c2)
+#vamos['C3']="{:%a %b %d %H:%M:%S de %Y}".format(c3)
+#vamos['C4']="{:%a %b %d %H:%M:%S de %Y}".format(vamos['C4'])
+#vamos['C5']="{:%a %b %d %H:%M:%S de %Y}".format(vamos['C5'])
+#vamos['C6']="{:%a %b %d %H:%M:%S de %Y}".format(vamos['C6'])
 
 
 
